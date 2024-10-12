@@ -1,4 +1,5 @@
-import express, { type Request, type Response } from "express";
+import express from "express";
+import { router as postsRouter } from "./routes";
 import dotenv from "dotenv";
 
 // configures dotenv to work in your application
@@ -7,15 +8,15 @@ const app = express();
 
 const PORT = process.env.PORT;
 
-app.get("/", (request: Request, response: Response) => {
-  response.status(200).send("Hello World");
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/", postsRouter);
 
 app
   .listen(PORT, () => {
-    console.log("Server running at PORT: ", PORT);
+    console.log(`Server running on port ${PORT}`);
   })
   .on("error", (error) => {
-    // gracefully handle error
     throw new Error(error.message);
   });
