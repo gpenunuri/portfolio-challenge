@@ -13,7 +13,7 @@ export interface IPost {
 }
 
 const Blog = () => {
-  const { blogs, isLoading, isError } = useBlogs();
+  const { blogs } = useBlogs();
   const navigate = useNavigate();
 
   const activeBlogs = blogs?.filter((blog: IPost) => blog.published);

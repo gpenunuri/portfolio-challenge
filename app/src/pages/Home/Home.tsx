@@ -33,7 +33,7 @@ const Home = () => {
             Learn how to get motivated consumers that already want your product
           </h5>
           <div className="hero__cta-box">
-            <Button text="Subscribe &nbsp; &#8594;" type="button" />
+            <Button text="Subscribe &nbsp; &#8594;" />
             <Link to="/blog">Visit my Blog</Link>
           </div>
         </div>
@@ -142,7 +142,7 @@ const Home = () => {
           Subscribe to get access to a community where you will learn how to get
           motivated consumers that already want your product!
         </p>
-        <Button type="button" text="Join Now!" />
+        <Button text="Join Now!" />
       </section>
     </main>
   );

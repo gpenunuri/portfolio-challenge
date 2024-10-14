@@ -4,10 +4,9 @@ import { useBlog } from "../../hooks/useBlog";
 const BlogSingle = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  console.log({ id });
   if (!id) navigate("/404");
 
-  const { blog, isLoading, isError } = useBlog(id);
+  const { blog } = useBlog(id || 0);
 
   if (!blog) navigate("/404");
 

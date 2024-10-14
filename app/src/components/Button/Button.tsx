@@ -1,10 +1,9 @@
 interface ButtonProps {
   text: string;
-  type?: "button" | "link";
 }
 
 const Button = (props: ButtonProps) => {
-  const { text, type } = props;
+  const { text } = props;
 
   return (
     <button type="button" className="button">

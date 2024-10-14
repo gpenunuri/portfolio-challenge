@@ -29,7 +29,7 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="navigation__cta-box">
-          <Button text="Subscribe" type="button" />
+          <Button text="Subscribe" />
         </div>
       </div>
     </header>
