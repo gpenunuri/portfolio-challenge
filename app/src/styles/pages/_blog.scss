@@ -1,15 +1,16 @@
 .blog {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 0 5rem;
+  padding: 22rem 5rem;
 
   &__text-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 4rem;
   }
 
   &__title {
@@ -28,5 +29,167 @@
     font-size: 2.4rem;
     font-weight: normal;
     max-width: 84rem;
+  }
+
+  &__posts {
+    margin: 4rem auto;
+    max-width: $grid-width;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .card {
+      width: 100%;
+      display: flex;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(7px);
+      backdrop-filter: blur(7px);
+      padding: 1.4rem;
+      margin: 1.4rem;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+
+      &__picture {
+        width: 40%;
+        border-radius: 1.6rem;
+        filter: brightness(50%);
+
+        @include respond(tab-port) {
+          width: 100%;
+        }
+
+        &:hover {
+          filter: brightness(100%);
+        }
+      }
+
+      &__text-box {
+        width: 60%;
+        padding: 0 3rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(tab-port) {
+          width: 100%;
+          padding: 3rem 0rem;
+        }
+      }
+
+      &__title {
+        color: $color-primary-light;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      &__subtitle {
+        color: $color-primary-light;
+        font-size: 1.8rem;
+      }
+
+      &__tags {
+        display: flex;
+        position: absolute;
+        bottom: 1.4rem;
+        right: 1.4rem;
+      }
+
+      &__tag {
+        border-radius: 4rem;
+        padding: 0.3rem 1.2rem;
+        background: $color-secondary-blue;
+        margin: 0 0.4rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.blog-single {
+  margin: 4rem auto;
+  height: 100vh;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .card {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    padding: 1.4rem;
+    flex-direction: column;
+
+    &__picture {
+      width: 100%;
+      border-radius: 1.6rem;
+      filter: brightness(50%);
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+
+    &__text-box {
+      width: 100%;
+      padding: 4rem 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond(tab-port) {
+        width: 100%;
+        padding: 3rem 0rem;
+      }
+    }
+
+    &__title {
+      color: $color-primary-light;
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+      color: $color-primary-light;
+      font-size: 1.8rem;
+    }
+
+    &__tags {
+      display: flex;
+      position: absolute;
+      bottom: 1.4rem;
+      right: 1.4rem;
+    }
+
+    &__tag {
+      border-radius: 4rem;
+      padding: 0.3rem 1.2rem;
+      background: $color-secondary-blue;
+      margin: 0 0.4rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }

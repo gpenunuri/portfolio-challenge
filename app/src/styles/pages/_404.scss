@@ -1,0 +1,36 @@
+.not-found {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    color: $color-primary-light;
+    font-size: 6rem;
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      text-decoration: none;
+      background-color: $color-primary-light;
+      display: inline-block;
+      font-weight: bold;
+      border-radius: 4rem;
+      border: none;
+      cursor: pointer;
+      color: #1b1871;
+      padding: 0.6rem 2rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
