@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@400..700&display=swap");
 @include font(
   "AfacadFlux",
   normal,
@@ -11,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: AfacadFlux, sans-serif;
+  font-family: "Afacad Flux", AfacadFlux, sans-serif;
 }
 
 html {
@@ -34,5 +35,5 @@ html {
 
 body {
   box-sizing: border-box;
-  background: $color-primary-dark;
+  background: $purple-gradient;
 }

@@ -1,0 +1,237 @@
+.hero {
+  padding: 22rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__profile-box {
+    width: 8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-primary-light;
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 1.2;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+  }
+
+  &__subtitle {
+    color: $color-primary-light;
+    font-size: 2.4rem;
+    font-weight: normal;
+  }
+
+  &__cta-box {
+    margin-top: 2rem;
+
+    button {
+      font-size: 1.4rem;
+      margin-right: 2rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    a {
+      color: $color-primary-light;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.our-partners {
+  text-align: center;
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: $color-primary-light;
+  }
+
+  &__box {
+    margin: 4rem 4rem;
+    max-width: $grid-width;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include respond(big-desktop) {
+      max-width: 144rem;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    margin: 3rem 0;
+    width: 33%;
+    text-align: center;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(big-desktop) {
+      margin: 3rem 3rem;
+    }
+  }
+
+  &__logo {
+    &:hover {
+      filter: brightness(80%);
+      cursor: pointer;
+    }
+  }
+}
+
+.my-work {
+  margin-top: 18rem;
+  margin-bottom: 18rem;
+  text-align: center;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: $color-primary-light;
+  }
+
+  &__cards {
+    margin: 4rem auto;
+    max-width: $grid-width;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    padding: 1.4rem;
+    margin: 1.4rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &__picture {
+      width: 40%;
+      border-radius: 1.6rem;
+      filter: brightness(50%);
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+
+    &__text-box {
+      width: 60%;
+      padding: 0 3rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond(tab-port) {
+        width: 100%;
+        padding: 3rem 0rem;
+      }
+    }
+
+    &__title {
+      color: $color-primary-light;
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+      color: $color-primary-light;
+      font-size: 1.8rem;
+    }
+
+    &__tags {
+      display: flex;
+      position: absolute;
+      bottom: 1.4rem;
+      right: 1.4rem;
+    }
+
+    &__tag {
+      border-radius: 4rem;
+      padding: 0.3rem 1.2rem;
+      background: $color-secondary-blue;
+      margin: 0 0.4rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.subscribe {
+  color: $color-primary-light;
+  text-align: center;
+  padding-bottom: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: $color-primary-light;
+    margin-bottom: 1.2rem;
+  }
+
+  &__subtitle {
+    color: $color-primary-light;
+    font-size: 2rem;
+    max-width: 52rem;
+    margin-bottom: 1.2rem;
+  }
+
+  button {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

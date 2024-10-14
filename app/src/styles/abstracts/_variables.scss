@@ -1,15 +1,34 @@
 :root {
   --color-primary-light: #f3f3f3;
-  --color-primary-dark: #12082e;
+  --color-primary-dark: #1b1871;
   --color-secondary-red: #ef3859;
   --color-secondary-blue: #39afe9;
 }
 
 // Colors
 $color-primary-light: #f3f3f3;
-$color-primary-dark: #12082e;
+$color-primary-dark: #1b1871;
 $color-secondary-red: #ef3859;
 $color-secondary-blue: #39afe9;
+
+$blue-gradient: linear-gradient(
+  41deg,
+  #001148 0%,
+  #002462 100% 100%,
+  #003680 100%
+);
+
+$dark-gradient: radial-gradient(
+  circle farthest-corner at 10% 20%,
+  rgba(7, 7, 9, 1) 6.5%,
+  rgba(27, 24, 113, 1) 93.2%
+);
+
+$purple-gradient: radial-gradient(
+  circle farthest-corner at 10% 20%,
+  rgba(27, 24, 113, 1) 6.5%,
+  rgba(24, 22, 39, 1) 90%
+);
 
 // Font
 $default-font-size: 1.6rem;

@@ -1,0 +1,14 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1b1871;
+    padding: 0.6rem 2rem;
+  }
+}

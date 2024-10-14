@@ -1,0 +1,64 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 3rem;
+  z-index: 666;
+}
+
+.navigation {
+  padding: 0.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: $grid-width;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+
+  &__logo {
+    width: 12rem;
+
+    &:hover {
+      filter: brightness(80%);
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+    margin: 0 6rem;
+
+    @include respond(big-desktop) {
+      margin: 0 8rem;
+    }
+
+    @include respond(tab-port) {
+      margin: 0 1rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    color: $color-primary-light;
+    font-size: 2rem;
+    padding: 1.2rem 1.2rem;
+
+    a {
+      color: $color-primary-light;
+      text-decoration: none;
+
+      &:hover {
+        filter: brightness(80%);
+        cursor: pointer;
+      }
+    }
+  }
+}
